@@ -14,7 +14,7 @@ class CreatePersonalData < ActiveRecord::Migration
       t.string :learning_skill
       t.timestamps
     end
-    add_column :events, :personal_data_id, :integer
-    add_index :events, :personal_data_id
+    add_column :personal_data, :personal_data_id, :integer
+    add_index :personal_data, :personal_data_id
   end
 end

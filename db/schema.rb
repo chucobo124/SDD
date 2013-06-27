@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(:version => 20130627030525) do
 
   create_table "experience_sharings", :force => true do |t|
     t.date     "ES_date"
-    t.string   "ES_context"
+    t.text     "ES_context"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -34,7 +34,10 @@ ActiveRecord::Schema.define(:version => 20130627030525) do
     t.string   "learning_skill"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
+    t.integer  "personal_data_id"
   end
+
+  add_index "personal_data", ["personal_data_id"], :name => "index_personal_data_on_personal_data_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
