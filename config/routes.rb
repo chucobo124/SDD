@@ -1,8 +1,11 @@
 Studentdata::Application.routes.draw do
 
+  resources :experience_sharings
+  resources :personal_data
+  root :to => "experience_sharings#index"
   devise_for :users
-
-  root :to => "home#index"
+  
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
