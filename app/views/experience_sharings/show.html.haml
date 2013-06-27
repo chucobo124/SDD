@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Es date:
+  = @experience_sharing.ES_date
+%p
+  %b Es context:
+  = @experience_sharing.ES_context
+
+= link_to 'Edit', edit_experience_sharing_path(@experience_sharing)
+\|
+= link_to 'Back', experience_sharings_path

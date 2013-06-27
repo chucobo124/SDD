@@ -1,0 +1,26 @@
+%h1 Listing experience_sharings
+- if current_user
+  = link_to('logout',destroy_user_session_path, :method => :delete)
+  = link_to('change password ', edit_registration_path(:user))
+- else
+  = link_to('regist',new_registration_path(:user))
+  = link_to('login', new_session_path(:user))
+%table
+  %tr
+    %th Es date
+    %th Es context
+    %th
+    %th
+    %th
+
+  - @experience_sharings.each do |experience_sharing|
+    %tr
+      %td= experience_sharing.ES_date
+      %td= experience_sharing.ES_context
+      %td= link_to 'Show', experience_sharing
+      %td= link_to 'Edit', edit_experience_sharing_path(experience_sharing)
+      %td= link_to 'Destroy', experience_sharing, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Experience sharing', new_experience_sharing_path
