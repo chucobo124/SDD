@@ -1,5 +1,5 @@
 Studentdata::Application.routes.draw do
-
+  get "welcome/say_hello" =>"welcome#say"
   resources :experience_sharings
   resources :personal_data
   root :to => "experience_sharings#index"

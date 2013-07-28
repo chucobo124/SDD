@@ -2,6 +2,8 @@
   = f.error_notification
   .inputs
     = f.input :ES_date
-    = f.input :ES_context, as: :text
+    = f.input :ES_Subject
+    = f.input :ES_context, as: :text,
+	input_html: {class: "span7"}
   .actions
     = f.submit 'Save'

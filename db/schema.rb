@@ -11,13 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130627030525) do
+ActiveRecord::Schema.define(:version => 20130627085932) do
 
   create_table "experience_sharings", :force => true do |t|
     t.date     "ES_date"
     t.text     "ES_context"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "ES_Subject"
   end
 
   create_table "personal_data", :force => true do |t|

@@ -1,12 +1,11 @@
 %p#notice= notice
 
-%p
+%li
   %b Es date:
   = @experience_sharing.ES_date
-%p
-  %b Es context:
-  = @experience_sharing.ES_context
-
+%li
+  %b Es Subject:
+  = @experience_sharing.ES_Subject
 = link_to 'Edit', edit_experience_sharing_path(@experience_sharing)
 \|
 = link_to 'Back', experience_sharings_path
