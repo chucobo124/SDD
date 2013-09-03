@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Birthday:
+  = @personal_information.Birthday
+%p
+  %b Id number:
+  = @personal_information.Id_Number
+
+= link_to 'Edit', edit_personal_information_path(@personal_information)
+\|
+= link_to 'Back', personal_informations_path

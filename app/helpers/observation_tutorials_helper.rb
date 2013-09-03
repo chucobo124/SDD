@@ -1,0 +1,2 @@
+module ObservationTutorialsHelper
+end

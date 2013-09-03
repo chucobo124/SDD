@@ -1,0 +1,19 @@
+%h1 Listing observation_tutorials
+
+%table
+  %tr
+    %th Learning ability
+    %th
+    %th
+    %th
+
+  - @observation_tutorials.each do |observation_tutorial|
+    %tr
+      %td= observation_tutorial.learning_ability
+      %td= link_to 'Show', observation_tutorial
+      %td= link_to 'Edit', edit_observation_tutorial_path(observation_tutorial)
+      %td= link_to 'Destroy', observation_tutorial, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Observation tutorial', new_observation_tutorial_path

@@ -1,0 +1,26 @@
+%h1 Listing personal_informations
+- if current_user
+  = link_to('logout',destroy_user_session_path, :method => :delete)
+  = link_to('change password ', edit_registration_path(:user))
+- else
+  = link_to('regist',new_registration_path(:user))
+  = link_to('login', new_session_path(:user))
+%table
+  %tr
+    %th Birthday
+    %th Id number
+    %th
+    %th
+    %th
+
+  - @personal_informations.each do |personal_information|
+    %tr
+      %td= personal_information.Birthday
+      %td= personal_information.Id_Number
+      %td= link_to 'Show', personal_information
+      %td= link_to 'Edit', edit_personal_information_path(personal_information)
+      %td= link_to 'Destroy', personal_information, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Personal information', new_personal_information_path

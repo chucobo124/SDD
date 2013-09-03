@@ -1,0 +1,22 @@
+= simple_form_for(@personal_information) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :Birthday
+    = f.input :Id_Number
+    = f.input :Attending_School
+    = f.input :Department
+    = f.input :School_Name
+    = f.input :Department
+    = f.input :Connect_Address
+    = f.input :Connect_Phone_Number
+    = f.input :Special_Experience
+    = f.input :Personality
+    = f.input :Expectations
+    = f.input :Specialty
+    = f.input :Ideal
+    = f.input :Planning_the_ability_to_learn
+    = f.hidden_field :user_id, :value => current_user.id
+  .form-actions
+    = f.button :submit
+
