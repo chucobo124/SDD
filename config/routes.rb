@@ -1,7 +1,11 @@
 Studentdata::Application.routes.draw do
-  get "welcome/say_hello" =>"welcome#say"
+
+  resources :observation_tutorials
+
+
   resources :experience_sharings
   resources :personal_data
+  resources :personal_informations
   root :to => "experience_sharings#index"
   devise_for :users
   

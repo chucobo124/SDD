@@ -3,8 +3,7 @@ class ExperienceSharingsController < ApplicationController
   # GET /experience_sharings.json
   before_filter :authenticate_user!
   def index
-    @experience_sharings = ExperienceSharing.all
-
+    @experience_sharings = ExperienceSharing.by_user(current_user)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @experience_sharings }
@@ -41,7 +40,7 @@ class ExperienceSharingsController < ApplicationController
   # POST /experience_sharings
   # POST /experience_sharings.json
   def create
-    @experience_sharing = ExperienceSharing.new(params[:experience_sharing])
+    @experience_sharing = ExperienceSharing.new(params[:experience_sharing]) # <=this is views experience_sharing
 
     respond_to do |format|
       if @experience_sharing.save

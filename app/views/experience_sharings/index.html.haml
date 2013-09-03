@@ -5,6 +5,8 @@
 - else
   = link_to('regist',new_registration_path(:user))
   = link_to('login', new_session_path(:user))
+%li
+  = link_to t('personal_informations'), personal_informations_path
 %table
   %tr
     %th Es date
