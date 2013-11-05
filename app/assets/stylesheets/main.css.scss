@@ -1,0 +1,30 @@
+body{
+	width:1024px;
+	height:768px;
+	margin:0 auto;
+}
+#maindisplay{
+	width:1024px;
+	background-color:black;
+	display:table-cell;
+}
+#title{
+	color:white;
+	padding:0 0 0 28px;
+}
+#screen{
+	height:768px;
+	background-color:white;
+	border:solid black 30px;
+}
+#menu{
+	width: 195px;
+	background-image:image-url("menubackground.jpg");
+	background-size: cover;
+	padding:10px;
+	display:table-cell;
+	text-align:top;
+}
+#main{
+	display:block;
+}

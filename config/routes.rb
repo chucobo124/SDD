@@ -2,11 +2,10 @@ Studentdata::Application.routes.draw do
 
   resources :observation_tutorials
 
-
   resources :experience_sharings
   resources :personal_data
   resources :personal_informations
-  root :to => "experience_sharings#index"
+  root :to => "main#index"
   devise_for :users
   
   

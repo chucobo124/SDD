@@ -1,6 +1,7 @@
 class ObservationTutorialsController < ApplicationController
   # GET /observation_tutorials
   # GET /observation_tutorials.json
+  before_filter :authenticate_user!
   def index
     @observation_tutorials = ObservationTutorial.all
 
